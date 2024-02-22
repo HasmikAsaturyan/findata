@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Show/Hide Example</title>
+    <style>
+        #hiddenDiv {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button id="toggleButton">Show/Hide</button>
+    <div id="hiddenDiv">
+    </div>
+
+    <script>
+       
+        var toggleButton = document.getElementById('toggleButton');
+        var hiddenDiv = document.getElementById('hiddenDiv');
+
+       
+        toggleButton.addEventListener('click', function() {
+            
+            if (hiddenDiv.style.display === 'none') {
+                hiddenDiv.style.display = 'block';
+            } else {
+                hiddenDiv.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>
