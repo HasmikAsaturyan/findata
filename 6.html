@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Display User Input</title>
+</head>
+<body>
+
+    <label for="userInput">Enter Text: </label>
+    <input type="text" id="userInput">
+    <button onclick="displayInput()">Display</button>
+
+    <p id="displayArea"></p>
+
+    <script>
+        function displayInput() {
+            var userInput = document.getElementById('userInput').value;
+            document.getElementById('displayArea').textContent = "User Input: " + userInput;
+        }
+    </script>
+
+</body>
+</html>
