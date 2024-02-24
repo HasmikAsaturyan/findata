@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Click Counter</title>
+</head>
+<body>
+
+    <button onclick="incrementCounter()">Click me</button>
+    <p id="displayArea">Click count: 0</p>
+
+    <script>
+        var clickCount = 0;
+
+        function incrementCounter() {
+            clickCount++;
+            updateDisplay();
+        }
+
+        function updateDisplay() {
+            document.getElementById('displayArea').textContent = 'Click count: ' + clickCount;
+        }
+    </script>
+
+</body>
+</html>
