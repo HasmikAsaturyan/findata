@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hover List</title>
+    <style>
+        li {
+            color: black;
+            transition: color 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        li:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <ul id="itemList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <script>
+        var itemList = document.getElementById('itemList');
+
+        itemList.addEventListener('mouseover', function(event) {
+            if (event.target.tagName === 'LI') {
+                event.target.style.color = 'blue'; 
+            }
+        });
+
+        itemList.addEventListener('mouseout', function(event) {
+            if (event.target.tagName === 'LI') {
+                event.target.style.color = 'black'; 
+            }
+        });
+    </script>
+
+</body>
+</html>
